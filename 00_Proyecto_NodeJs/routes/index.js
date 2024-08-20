@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = require("express");
+var routes_1 = require("../api/user/routes");
+var routes_2 = require("../api/product/routes");
+var routes_3 = require("../api/cart/routes");
+var router = express_1.default.Router();
+router.use("/users", routes_1.default);
+router.use("/products", routes_2.default);
+router.use("/cart", routes_3.default);
+exports.default = router;
